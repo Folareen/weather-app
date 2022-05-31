@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+@mixin large {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
 *,
 *::after,
 *::before {
@@ -8,21 +14,26 @@
     box-sizing: border-box;
 }
 
-#app {
-    display: flex;
-    font-family: 'Raleway', sans-serif;
-}
 
-@mixin large {
-    @media (min-width: 768px) {
-        @content;
+#root {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    height: max-content;
+
+    @include large {
+        flex-direction: row;
+        height: 100vh;
     }
 }
 
+
+
+// main
 .main {
     width: 100%;
     background-color: #1E213A;
-    height: 100vh;
+    height: 100%;
     padding: 46px;
     text-align: center;
 
@@ -79,4 +90,86 @@
         margin-top: 25px;
         // border: 1px solid red;
     }
+}
+
+// highlights
+.highlights {
+    width: 100%;
+    background: #100E1D;
+    padding: 46px 92px;
+
+    @include large {
+        width: 70%;
+    }
+
+
+    .units {
+        height: max-content;
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+            font-size: 18px;
+            background: #585676;
+            color: #E7E7EB;
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 50%;
+
+            &:first-child {
+                color: #110E3C;
+                background: #E7E7EB;
+            }
+        }
+
+    }
+
+    .next {
+        // border: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 46px;
+
+        .next__weather {
+            background: #1E213A;
+            padding: 22px;
+            width: max-content;
+            color: #E7E7EB;
+
+            .next-date {
+                color: #E7E7EB;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .next-temperature {
+                display: flex;
+
+            }
+        }
+
+
+    }
+
+
+    h3 {
+        color: #E7E7EB;
+        margin-top: 46px;
+    }
+
+    .weather-highlights {
+        display: flex;
+
+        .weather-highlight {
+            margin-top: 23px;
+            background: #1E213A
+
+        }
+    }
+
+
 }

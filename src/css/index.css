@@ -8,17 +8,34 @@
           box-sizing: border-box;
 }
 
-#app {
+#root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: 'Raleway', sans-serif;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+@media (min-width: 768px) {
+  #root {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100vh;
+  }
 }
 
 .main {
   width: 100%;
   background-color: #1E213A;
-  height: 100vh;
+  height: 100%;
   padding: 46px;
   text-align: center;
 }
@@ -80,5 +97,95 @@
   font-size: 18px;
   color: #A09FB1;
   margin-top: 25px;
+}
+
+.highlights {
+  width: 100%;
+  background: #100E1D;
+  padding: 46px 92px;
+}
+
+@media (min-width: 768px) {
+  .highlights {
+    width: 70%;
+  }
+}
+
+.highlights .units {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.highlights .units span {
+  font-size: 18px;
+  background: #585676;
+  color: #E7E7EB;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.highlights .units span:first-child {
+  color: #110E3C;
+  background: #E7E7EB;
+}
+
+.highlights .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 46px;
+}
+
+.highlights .next .next__weather {
+  background: #1E213A;
+  padding: 22px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #E7E7EB;
+}
+
+.highlights .next .next__weather .next-date {
+  color: #E7E7EB;
+}
+
+.highlights .next .next__weather img {
+  width: 60px;
+  height: 60px;
+}
+
+.highlights .next .next__weather .next-temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.highlights h3 {
+  color: #E7E7EB;
+  margin-top: 46px;
+}
+
+.highlights .weather-highlights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.highlights .weather-highlights .weather-highlight {
+  margin-top: 23px;
+  background: #1E213A;
 }
 /*# sourceMappingURL=index.css.map */

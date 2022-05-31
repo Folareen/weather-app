@@ -16,12 +16,10 @@ import Highlights from './Highlights';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Main/>
-        {/* <Highlights /> */}
-      </header>
-    </div>
+    <>
+      <Main/>
+      <Highlights />
+    </>
   );
 }
 
