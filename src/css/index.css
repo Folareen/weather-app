@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main {
+  width: 100%;
+  background-color: #1E213A;
+  height: 100vh;
+  padding: 46px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 30%;
+  }
+}
+
+.main .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .search button {
+  padding: 15px 20px;
+  color: #E7E7EB;
+  background: #6E707A;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.main .condition-img {
+  width: 100%;
+  height: 30%;
+  background-image: url("../images/Cloud-background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.main .condition-img img {
+  height: 100%;
+}
+
+.main .temperature {
+  font-size: 114px;
+  color: #E7E7EB;
+  margin: 40px 0;
+}
+
+.main .temperature span {
+  font-size: 48px;
+}
+
+.main .condition {
+  font-size: 30px;
+  color: #A09FB1;
+  margin-bottom: 40px;
+}
+
+.main .date,
+.main .location {
+  font-size: 18px;
+  color: #A09FB1;
+  margin-top: 25px;
+}
+/*# sourceMappingURL=index.css.map */
