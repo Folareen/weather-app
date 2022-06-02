@@ -1,4 +1,3 @@
-// import { data } from './Main';
 import Nextweather from './Nextweather';
 import Weatherhighlight from './Weatherhighlight';
 
