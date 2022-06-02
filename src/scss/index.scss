@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 @mixin large {
-    @media (min-width: 768px) {
+    @media (min-width: 980px) {
         @content;
     }
 }
@@ -14,25 +14,27 @@
     box-sizing: border-box;
 }
 
+body {
+    height: max-content;
+}
+
 
 #root {
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
-    height: max-content;
+    height: 100%;
 
     @include large {
         flex-direction: row;
         height: 100vh;
+
     }
 
 
     // main search
     .main--search {
 
-        // 
-        // display: none;
-        // 
 
         background: #1E213A;
         height: 100vh;
@@ -109,16 +111,17 @@
 .main {
     width: 100%;
     background-color: #04050e;
-    height: 100%;
-    padding: 46px;
+    height: 100vh;
+    padding: 26px;
     text-align: center;
     position: relative;
-    // background-image: url("../images/Cloud-background.png");
     background: #1E213A;
 
 
     @include large {
+        height: 100%;
         width: 30%;
+        padding: 46px;
     }
 
     .search {
@@ -137,8 +140,6 @@
     .condition-img {
         width: 100%;
         height: 30%;
-
-        // background-color: rgba(0, 0, 0, 0.9);
 
         img {
             height: 100%;
@@ -174,7 +175,6 @@
         font-size: 18px;
         color: #A09FB1;
         margin-top: 25px;
-        // border: 1px solid red;
         text-transform: capitalize;
 
     }
@@ -195,11 +195,14 @@
 // highlights
 .highlights {
     width: 100%;
+    height: max-content;
     background: #100E1D;
-    padding: 46px 92px;
+    padding: 26px 46px;
 
     @include large {
         width: 70%;
+        padding: 46px 92px;
+        height: 100%;
     }
 
 
@@ -225,18 +228,22 @@
     }
 
     .next {
-        // border: 2px solid red;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-        justify-content: space-between;
         margin-top: 46px;
         text-align: center;
+
+        @include large {
+            justify-content: space-between;
+        }
 
         .next__weather {
             background: #1E213A;
             padding: 22px;
             width: max-content;
             color: #E7E7EB;
+            margin: 23px 10px;
 
             .next-date {
                 color: #E7E7EB;
@@ -259,6 +266,11 @@
     h3 {
         color: #E7E7EB;
         margin-top: 46px;
+        text-align: center;
+
+        @include large{
+            text-align: left;
+        }
     }
 
     .weather-highlights {

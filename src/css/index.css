@@ -8,6 +8,12 @@
           box-sizing: border-box;
 }
 
+body {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
 #root {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,12 +23,10 @@
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: 'Raleway', sans-serif;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   #root {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -46,7 +50,7 @@
   padding: 82px 46px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   #root .main--search {
     left: -30%;
     width: 30%;
@@ -109,16 +113,18 @@
 .main {
   width: 100%;
   background-color: #04050e;
-  height: 100%;
-  padding: 46px;
+  height: 100vh;
+  padding: 26px;
   text-align: center;
   position: relative;
   background: #1E213A;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .main {
+    height: 100%;
     width: 30%;
+    padding: 46px;
   }
 }
 
@@ -208,13 +214,18 @@
 
 .highlights {
   width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   background: #100E1D;
-  padding: 46px 92px;
+  padding: 26px 46px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .highlights {
     width: 70%;
+    padding: 46px 92px;
+    height: 100%;
   }
 }
 
@@ -248,13 +259,21 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 46px;
   text-align: center;
+}
+
+@media (min-width: 980px) {
+  .highlights .next {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .highlights .next .next__weather {
@@ -264,6 +283,7 @@
   width: -moz-max-content;
   width: max-content;
   color: #E7E7EB;
+  margin: 23px 10px;
 }
 
 .highlights .next .next__weather .next-date {
@@ -278,6 +298,13 @@
 .highlights h3 {
   color: #E7E7EB;
   margin-top: 46px;
+  text-align: center;
+}
+
+@media (min-width: 980px) {
+  .highlights h3 {
+    text-align: left;
+  }
 }
 
 .highlights .weather-highlights {
@@ -300,7 +327,7 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .highlights .weather-highlights .weather-highlight {
     width: 45%;
   }

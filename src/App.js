@@ -54,6 +54,8 @@ function App() {
 
     })()
 
+    document.querySelector('.main--search').classList.remove('open-search')
+
   };
 
   if(weather["list"] !== undefined){

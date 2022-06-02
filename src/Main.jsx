@@ -79,6 +79,8 @@ const Main = (props) =>{
             case "hail":
                 return Hail;
                 break;
+            default:
+                return Clear;
         }
     }
 
