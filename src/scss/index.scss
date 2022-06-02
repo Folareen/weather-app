@@ -39,11 +39,16 @@
         position: fixed;
         top: 0;
         bottom: 0;
-        left: -30%;
+        left: -100%;
         transition: all 1s ease;
         z-index: 2;
-        width: 30%;
+        width: 100%;
         padding: 82px 46px;
+
+            @include large{
+                left: -30%;
+                width: 30%;
+            }
 
         &.open-search {
             left: 0;
@@ -221,10 +226,9 @@
                 height: 60px;
             }
 
-            .next-temperature {
-                display: flex;
+            // .next-temperature {
 
-            }
+            // }
         }
 
 
@@ -238,12 +242,20 @@
 
     .weather-highlights {
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
 
         .weather-highlight {
             margin-top: 23px;
             padding: 23px;
             background: #1E213A;
             color: #E7E7EB;
+            width: 100%;
+
+            @include large{
+                width: 45%;
+            }
 
         }
     }

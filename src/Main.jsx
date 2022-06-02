@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaSearchLocation} from 'react-icons/fa';
 import background from './images/Clear.png';
+import { displayDate } from './App';
 
 const mainProperties = {
     backgroundUrl: background,
@@ -38,14 +39,14 @@ const Main = (props) =>{
                     {props.temp}<span><sup>o</sup>C</span>
                 </h3>
                 <h5 className="condition">
-                    Shower
+                    {props.condition}
                 </h5>
                 <p className="date">
-                    Fri 5, jun
+                    {displayDate(0)}
                 </p>
                 <p className="location">
                     <FaSearchLocation/>
-                    Lagos
+                    {props.location}
                 </p>
 
             </main>

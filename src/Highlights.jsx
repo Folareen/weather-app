@@ -1,5 +1,6 @@
-import background from './images/Clear.png';
 // import { data } from './Main';
+import Nextweather from './Nextweather';
+import Weatherhighlight from './Weatherhighlight';
 
 const Highlights = (props) => {
 
@@ -20,37 +21,11 @@ const Highlights = (props) => {
                 </span>
             </div>
             <div className="next">
-                <div className="next__weather">
-                    <h5 className="next-date">
-                        {/* {props.weather !== undefined ? props.weather["list"][0]["weather"][0]["main"] : "weather condition" } */}
-                        {props.weather}
-                    </h5>
-                    <img src={background} alt="" className="next-img" />
-                    <div className="next-temperature">
-                        <span>1<sup>o</sup>C</span>
-                        <span> 2<sup>o</sup>C</span>
-                    </div>
-                </div>
-                <div className="next__weather">
-                    <h5 className="next-date">
-                        Tomorrow
-                    </h5>
-                    <img src={background} alt="" className="next-img" />
-                    <div className="next-temperature">
-                        <span>1<sup>o</sup>C</span>
-                        <span> 2<sup>o</sup>C</span>
-                    </div>
-                </div>
-                <div className="next__weather">
-                    <h5 className="next-date">
-                        Tomorrow
-                    </h5>
-                    <img src={background} alt="" className="next-img" />
-                    <div className="next-temperature">
-                        <span>1<sup>o</sup>C</span>
-                        <span> 2<sup>o</sup>C</span>
-                    </div>
-                </div>
+                <Nextweather nextWeatherData = {props.nextData} index = {1} />
+                <Nextweather nextWeatherData = {props.nextData} index= {2} />
+                <Nextweather nextWeatherData = {props.nextData} index = {3} />
+                <Nextweather nextWeatherData = {props.nextData} index={4}/>
+                <Nextweather nextWeatherData = {props.nextData} index= {5}/>
             </div>
 
             <h3>
@@ -58,17 +33,10 @@ const Highlights = (props) => {
             </h3>
             <div className="weather-highlights">
 
-                <div className="weather-highlight">
-                    <h5>
-                        Wind Status
-                    </h5>
-                    <p className="value">
-                        7<span>mph</span>
-                    </p>
-                    <div className="indicator">
-                        {/* some rand loll */}
-                    </div>
-                </div>
+                <Weatherhighlight />
+                <Weatherhighlight />
+                <Weatherhighlight />
+                <Weatherhighlight />
 
             </div>
 
