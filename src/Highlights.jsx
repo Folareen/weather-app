@@ -1,6 +1,14 @@
 import background from './images/Clear.png';
+// import { data } from './Main';
 
-const Highlights = () => {
+const Highlights = (props) => {
+
+    // props.weather
+
+    // console.log(props.weather)
+
+    // console.log(props.weather["list"]!== undefined ? props.weather["list"][0]["weather"][0]["main"] : "weather condition" )
+
     return(
         <section className="highlights">
             <div className="units">
@@ -14,7 +22,8 @@ const Highlights = () => {
             <div className="next">
                 <div className="next__weather">
                     <h5 className="next-date">
-                        Tomorrow
+                        {/* {props.weather !== undefined ? props.weather["list"][0]["weather"][0]["main"] : "weather condition" } */}
+                        {props.weather}
                     </h5>
                     <img src={background} alt="" className="next-img" />
                     <div className="next-temperature">
