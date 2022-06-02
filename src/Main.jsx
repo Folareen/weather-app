@@ -20,6 +20,8 @@ const Main = (props) =>{
 
     //props.weather
 
+    console.log(props.condition)
+
 
     return(
         <>

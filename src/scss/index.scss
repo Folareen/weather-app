@@ -45,10 +45,10 @@
         width: 100%;
         padding: 82px 46px;
 
-            @include large{
-                left: -30%;
-                width: 30%;
-            }
+        @include large {
+            left: -30%;
+            width: 30%;
+        }
 
         &.open-search {
             left: 0;
@@ -157,6 +157,7 @@
         font-size: 30px;
         color: #A09FB1;
         margin-bottom: 40px;
+        text-transform: capitalize;
     }
 
     .date,
@@ -165,8 +166,9 @@
         color: #A09FB1;
         margin-top: 25px;
         // border: 1px solid red;
-    }
+        text-transform: capitalize;
 
+    }
 
 
 }
@@ -252,9 +254,22 @@
             background: #1E213A;
             color: #E7E7EB;
             width: 100%;
+            text-align: center;
 
-            @include large{
+            @include large {
                 width: 45%;
+            }
+
+            h5 {
+                font-size: 16px;
+            }
+
+            .value {
+                font-size: 64px;
+
+                span {
+                    font-size: 36px;
+                }
             }
 
         }

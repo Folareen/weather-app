@@ -164,6 +164,7 @@
   font-size: 30px;
   color: #A09FB1;
   margin-bottom: 40px;
+  text-transform: capitalize;
 }
 
 .main .date,
@@ -171,6 +172,7 @@
   font-size: 18px;
   color: #A09FB1;
   margin-top: 25px;
+  text-transform: capitalize;
 }
 
 .highlights {
@@ -264,11 +266,24 @@
   background: #1E213A;
   color: #E7E7EB;
   width: 100%;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .highlights .weather-highlights .weather-highlight {
     width: 45%;
   }
+}
+
+.highlights .weather-highlights .weather-highlight h5 {
+  font-size: 16px;
+}
+
+.highlights .weather-highlights .weather-highlight .value {
+  font-size: 64px;
+}
+
+.highlights .weather-highlights .weather-highlight .value span {
+  font-size: 36px;
 }
 /*# sourceMappingURL=index.css.map */

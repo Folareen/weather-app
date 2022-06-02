@@ -4,12 +4,6 @@ import Weatherhighlight from './Weatherhighlight';
 
 const Highlights = (props) => {
 
-    // props.weather
-
-    // console.log(props.weather)
-
-    // console.log(props.weather["list"]!== undefined ? props.weather["list"][0]["weather"][0]["main"] : "weather condition" )
-
     return(
         <section className="highlights">
             <div className="units">
@@ -33,10 +27,7 @@ const Highlights = (props) => {
             </h3>
             <div className="weather-highlights">
 
-                <Weatherhighlight />
-                <Weatherhighlight />
-                <Weatherhighlight />
-                <Weatherhighlight />
+                <Weatherhighlight highlightData = {props.weatherHighlightData}/>
 
             </div>
 

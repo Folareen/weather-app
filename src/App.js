@@ -87,8 +87,8 @@ function App() {
         </div>
       </div> 
 
-      <Main temp = {isNotEmpty() ? Math.ceil(weatherData[0]["main"]["temp"])  : ""} condition = {isNotEmpty() ? weatherData[0]["weather"]["main"] : ""} location = {query} />
-      <Highlights  nextData = {weatherData} />
+      <Main temp = {isNotEmpty() ? Math.ceil(weatherData[0]["main"]["temp"])  : ""} condition = {isNotEmpty() ? weatherData[0]["weather"][0]["description"] : ""} location = {query} />
+      <Highlights  nextData = {weatherData} weatherHighlightData = {weatherData[0]} />
     </>
   );
 }
