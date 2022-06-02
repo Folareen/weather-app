@@ -108,10 +108,12 @@
 
 .main {
   width: 100%;
-  background-color: #1E213A;
+  background-color: #04050e;
   height: 100%;
   padding: 46px;
   text-align: center;
+  position: relative;
+  background: #1E213A;
 }
 
 @media (min-width: 768px) {
@@ -141,9 +143,16 @@
 .main .condition-img {
   width: 100%;
   height: 30%;
-  background-image: url("../images/Cloud-background.png");
-  background-position: center;
-  background-size: cover;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .main .condition-img img {
@@ -173,6 +182,28 @@
   color: #A09FB1;
   margin-top: 25px;
   text-transform: capitalize;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  0% {
+    -webkit-transform: translateY(-5px) scale(1.1);
+            transform: translateY(-5px) scale(1.1);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  0% {
+    -webkit-transform: translateY(-5px) scale(1.1);
+            transform: translateY(-5px) scale(1.1);
+  }
 }
 
 .highlights {
@@ -285,5 +316,25 @@
 
 .highlights .weather-highlights .weather-highlight .value span {
   font-size: 36px;
+}
+
+.highlights .weather-highlights .weather-highlight .indicator {
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: lightgray;
+  background-color: darkgrey;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=index.css.map */

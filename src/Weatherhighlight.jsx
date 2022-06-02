@@ -1,3 +1,4 @@
+import {FaPlay} from 'react-icons/fa';
 
 const Weatherhighlight = (props) => {
 
@@ -32,9 +33,9 @@ const Weatherhighlight = (props) => {
             <p className="value">
                 {isNotEmpty() ? (props.highlightData.wind.speed) : ("")}<span>mph</span>
             </p>
-            <div className="indicator">
-                {/* some rand loll */}
-            </div>
+            {/* <div className="indicator">
+                <FaPlay/>
+            </div> */}
         </div>
         <div className="weather-highlight">
             <h5>
@@ -43,9 +44,8 @@ const Weatherhighlight = (props) => {
             <p className="value">
                 {isNotEmpty() ? (props.highlightData.main.humidity) : ("")}<span>%</span>
             </p>
-            <div className="indicator">
-                {/* some rand loll */}
-            </div>
+            {/* <div className="indicator">
+            </div> */}
         </div>
         <div className="weather-highlight">
             <h5>
@@ -54,9 +54,8 @@ const Weatherhighlight = (props) => {
             <p className="value">
                 {isNotEmpty() ? Math.ceil(props.highlightData.visibility / 1609) : ("")}<span>miles</span>
             </p>
-            <div className="indicator">
-                {/* some rand loll */}
-            </div>
+            {/* <div className="indicator">
+            </div> */}
         </div>
         <div className="weather-highlight">
             <h5>
@@ -65,9 +64,8 @@ const Weatherhighlight = (props) => {
             <p className="value">
                 {isNotEmpty() ? (props.highlightData.main.pressure) : ("")}<span>mb</span>
             </p>
-            <div className="indicator">
-                {/* some rand loll */}
-            </div>
+            {/* <div className="indicator">
+            </div> */}
         </div>
     </>
   )
