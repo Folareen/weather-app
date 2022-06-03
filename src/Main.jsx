@@ -80,7 +80,7 @@ const Main = (props) =>{
                 return Hail;
                 break;
             default:
-                return Clear;
+                return "";
         }
     }
 

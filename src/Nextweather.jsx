@@ -71,7 +71,7 @@ const Nextweather = (props) => {
               return Hail;
               break;
           default:
-            return Clear;
+            return "";
       }
     }
   }
