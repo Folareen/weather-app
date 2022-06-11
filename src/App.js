@@ -15,8 +15,12 @@ export function displayDate(day){
   ];
   const currDate = new Date().getDate();
   const currDay = new Date().getDay();
-  const actualDay = (currDay + day) > 6 ? (currDate + day) -5 : currDay + day
+  const actualDay = (currDay + day) > 6 ? (currDay + day) -7 : currDay + day
   const month = new Date().getMonth();
+
+  // console.log(actualDay);
+  // console.log(currDay);
+  console.log(day);
 
   return `${DAYS[actualDay]}, ${currDate + day} ${MONTH[month]}`
 }
