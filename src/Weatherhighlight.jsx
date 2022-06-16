@@ -1,5 +1,3 @@
-import {FaPlay} from 'react-icons/fa';
-
 const Weatherhighlight = (props) => {
 
     const isNotEmpty = () =>{
