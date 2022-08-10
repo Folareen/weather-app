@@ -46,7 +46,7 @@ body {
 }
 
 .loading .react-logo {
-  height: 40vh;
+  height: 35vh;
   pointer-events: none;
   -webkit-animation: App-logo-spin infinite 10s linear;
           animation: App-logo-spin infinite 10s linear;
