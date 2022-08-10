@@ -52,12 +52,10 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
-    height: 100%;
+    height: max-content;
 
     @include large {
         flex-direction: row;
-        height: 100vh;
-
     }
 
 
@@ -148,7 +146,7 @@ body {
 
 
     @include large {
-        height: 100%;
+        height: unset;
         width: 30%;
         padding: 46px;
     }
@@ -179,9 +177,13 @@ body {
         width: 100%;
         height: 30%;
         margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
             height: 100%;
+            object-fit: contain;
         }
 
         animation-name: move;
@@ -241,7 +243,7 @@ body {
     @include large {
         width: 70%;
         padding: 46px 92px;
-        height: 100%;
+        height: max-content;
     }
 
 
@@ -292,10 +294,6 @@ body {
                 width: 60px;
                 height: 60px;
             }
-
-            // .next-temperature {
-
-            // }
         }
 
 
@@ -343,8 +341,6 @@ body {
             }
 
             .indicator {
-                // height: 30px;
-                // width: 30px;
                 font-size: 12px;
                 border-radius: 50%;
                 padding: 10px;
